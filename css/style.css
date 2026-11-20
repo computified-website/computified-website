@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:wght@700&display=swap');
+/* Computified - shared stylesheet (css/style.css)
+   Colors taken from the Computified logo (blue gradient) and the
+   Computified.jpg artwork (black background, blue/green glow). */
+:root{
+  --bg:#05080d;
+  --bg2:#0b1420;
+  --panel:#0f1b2b;
+  --line:#1d2f47;
+  --text:#dbe6f2;
+  --muted:#9fb3c8;
+  --blue:#4a8fd0;      /* logo mid blue */
+  --blue-light:#8cc3ef;/* logo light blue */
+  --blue-dark:#2f6ea8; /* logo dark blue */
+  --green:#6fdc3a;     /* accent from artwork */
+  --max:1100px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;font-size:17px}
+a{color:var(--blue-light)}
+a:hover{color:#fff}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* ---------- Header / nav ---------- */
+.site-header{background:#000;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.site-header .wrap{gap:16px;display:flex;align-items:center;justify-content:space-between;min-height:76px}
+.logo img{height:56px;width:auto}
+.nav-toggle{display:none}
+.nav-toggle-label{display:none;cursor:pointer;padding:10px;color:var(--blue-light);font-size:28px;line-height:1;user-select:none}
+.main-nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:nowrap;gap:2px}
+.main-nav a{display:block;padding:10px 10px;color:var(--text);text-decoration:none;font-size:14.5px;font-weight:600;border-radius:6px;white-space:nowrap}
+.main-nav a:hover{background:var(--panel);color:#fff}
+.main-nav a.active{color:#fff;background:linear-gradient(180deg,var(--blue-dark),#1d4c7a)}
+
+/* Services dropdown (CSS only, opens on hover or keyboard focus) */
+.has-sub{position:relative}
+.caret{font-size:11px;margin-left:3px}
+.main-nav .sub-menu{display:none;position:absolute;right:0;top:100%;min-width:290px;background:#000;border:1px solid var(--line);
+  border-radius:10px;padding:8px !important;box-shadow:0 12px 30px rgba(0,0,0,.6);flex-direction:column !important;z-index:60}
+.has-sub:hover > .sub-menu,.has-sub:focus-within > .sub-menu{display:flex}
+.sub-menu a{font-weight:500}
+.has-sub > a.sub-toggle.active{color:#fff;background:linear-gradient(180deg,var(--blue-dark),#1d4c7a)}
+
+/* ---------- Hero ---------- */
+.hero{background:#000 url("../images/Computified.jpg") right center/cover no-repeat;position:relative}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.92) 0%,rgba(0,0,0,.75) 45%,rgba(0,0,0,.15) 100%)}
+.hero .wrap{position:relative;padding:90px 20px 100px}
+.hero h1{font-size:44px;line-height:1.15;margin:0 0 16px;max-width:620px;color:#fff}
+.hero p{max-width:560px;color:var(--muted);font-size:19px;margin:0 0 28px}
+.page-hero{background:radial-gradient(ellipse at 80% 0%,rgba(74,143,208,.35),transparent 60%),var(--bg2);border-bottom:1px solid var(--line)}
+.page-hero .wrap{padding:56px 20px 48px}
+.page-hero h1{margin:0 0 10px;font-size:36px;color:#fff;line-height:1.2}
+.page-hero p{margin:0;color:var(--muted);max-width:760px;font-size:18px}
+.tag{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-block;padding:13px 26px;border-radius:8px;font-weight:700;text-decoration:none;
+  background:linear-gradient(180deg,var(--blue),var(--blue-dark));color:#fff;border:1px solid var(--blue);box-shadow:0 0 18px rgba(74,143,208,.35)}
+.btn:hover{background:linear-gradient(180deg,var(--blue-light),var(--blue));color:#000}
+.btn.ghost{background:transparent;box-shadow:none;color:var(--blue-light)}
+.btn.ghost:hover{background:var(--panel);color:#fff}
+.btn + .btn{margin-left:10px}
+
+/* ---------- Sections ---------- */
+section{padding:56px 0}
+section.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-size:28px;color:#fff;margin:0 0 18px}
+h3{font-size:20px;color:#fff;margin:0 0 8px}
+.lead{color:var(--muted);max-width:780px;margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column}
+.card p{color:var(--muted);margin:0 0 16px;flex:1}
+.card a.more{font-weight:700;text-decoration:none}
+.card:hover{border-color:var(--blue-dark);box-shadow:0 0 22px rgba(74,143,208,.18)}
+.icon{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;margin-bottom:14px;
+  background:rgba(74,143,208,.15);color:var(--blue-light);font-size:22px}
+.two-col{display:grid;grid-template-columns:1.4fr 1fr;gap:36px;align-items:start}
+ul.check{list-style:none;padding:0;margin:0}
+ul.check li{padding:8px 0 8px 30px;position:relative;border-bottom:1px solid var(--line)}
+ul.check li:last-child{border-bottom:0}
+ul.check li::before{content:"\2713";position:absolute;left:4px;top:8px;color:var(--green);font-weight:700}
+.audience{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.audience div{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:8px;padding:16px 18px}
+.audience strong{display:block;color:#fff;margin-bottom:4px}
+.audience span{color:var(--muted);font-size:15.5px}
+.plan{background:linear-gradient(180deg,rgba(111,220,58,.08),rgba(74,143,208,.08));border:1px solid var(--line);border-radius:12px;padding:26px}
+.plan .badge{display:inline-block;background:var(--green);color:#000;font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:20px;margin-bottom:12px}
+.steps{counter-reset:step;list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.steps li{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 18px 18px 58px;position:relative;color:var(--muted)}
+.steps li::before{counter-increment:step;content:counter(step);position:absolute;left:16px;top:16px;width:30px;height:30px;border-radius:50%;
+  background:var(--blue-dark);color:#fff;font-weight:800;display:grid;place-items:center}
+.steps strong{color:#fff;display:block}
+.cta{text-align:center;background:radial-gradient(ellipse at center,rgba(74,143,208,.28),transparent 70%),#000;border-top:1px solid var(--line)}
+.cta h2{margin-bottom:8px}
+.cta p{color:var(--muted);margin:0 auto 24px;max-width:640px}
+
+/* ---------- Contact ---------- */
+.contact-box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:26px}
+.contact-box dl{margin:0}
+.contact-box dt{color:var(--muted);font-size:14px;text-transform:uppercase;letter-spacing:.05em;margin-top:14px}
+.contact-box dd{margin:2px 0 0;font-size:20px;color:#fff}
+form.contact label{display:block;font-weight:600;margin:14px 0 6px}
+form.contact input,form.contact select,form.contact textarea{width:100%;padding:12px;border-radius:8px;border:1px solid var(--line);
+  background:#07101b;color:var(--text);font:inherit}
+form.contact textarea{min-height:140px;resize:vertical}
+form.contact button{margin-top:18px;cursor:pointer;font:inherit;font-weight:700}
+.note{font-size:14px;color:var(--muted)}
+
+/* ---------- Footer ---------- */
+.site-footer{background:#000;border-top:1px solid var(--line);padding:40px 0 24px;color:var(--muted);font-size:15px}
+.site-footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}
+.site-footer h4{color:#fff;margin:0 0 10px;font-size:16px}
+.site-footer ul{list-style:none;margin:0;padding:0}
+.site-footer li{margin:4px 0}
+.site-footer a{color:var(--muted);text-decoration:none}
+.site-footer a:hover{color:#fff}
+.site-footer .logo img{height:48px;margin-bottom:10px}
+.copyright{border-top:1px solid var(--line);margin-top:28px;padding-top:16px;font-size:14px;text-align:center}
+
+/* ---------- Responsive ---------- */
+@media (max-width:860px){
+  .nav-toggle-label{display:block}
+  .main-nav{position:absolute;top:100%;left:0;right:0;background:#000;border-bottom:1px solid var(--line);display:none}
+  .nav-toggle:checked ~ .main-nav{display:block}
+  .main-nav ul{flex-direction:column;padding:8px 12px 14px}
+  .main-nav a{padding:12px 10px;font-size:16px}
+  /* Services sub-menu: always expanded inside the mobile menu */
+  .has-sub .sub-menu{position:static;display:block;min-width:0;box-shadow:none;border:0;background:transparent;
+    padding:0 0 4px 14px !important;margin:0;border-left:2px solid var(--line)}
+  .has-sub .sub-menu a{font-size:15px;padding:9px 10px;font-weight:500}
+  .caret{display:none}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .hero .wrap{padding:60px 20px 70px}
+  .hero h1{font-size:32px}
+  .page-hero h1{font-size:28px}
+  .two-col{grid-template-columns:1fr}
+  .site-footer .cols{grid-template-columns:1fr}
+  .logo img{height:44px}
+  .btn + .btn{margin-left:0;margin-top:10px}
+}
+
+/* בס"ד centered in header */
+.site-header .wrap{position:relative}
+.bsd{position:absolute;left:50%;top:7px;transform:translateX(-50%);line-height:1;color:#cfe3ff;font-family:'Bona Nova','David','Times New Roman',serif;font-size:19px;font-weight:700;letter-spacing:1px;pointer-events:none;white-space:nowrap}
+@media (max-width:860px){.bsd{font-size:16px;top:6px}}

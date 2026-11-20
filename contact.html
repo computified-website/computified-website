@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Computified</title>
+  <meta name="description" content="Contact Computified LLC for computer repair, IT services, security cameras, access control and website building.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== HEADER (same on every page) ===== -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html"><img src="images/comp.png" alt="Computified" width="700" height="215"></a>
+    <span class="bsd" lang="he" dir="rtl">ב"ה</span>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">&#9776;</label>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="has-sub">
+          <a href="index.html#services" class="sub-toggle" aria-haspopup="true">Services <span class="caret">&#9662;</span></a>
+          <ul class="sub-menu">
+            <li><a href="computer-repair.html">Computer Repair &amp; IT</a></li>
+            <li><a href="security-cameras.html">Security Cameras</a></li>
+            <li><a href="remote-access.html">Remote Access</a></li>
+            <li><a href="access-control.html">Access Control</a></li>
+            <li><a href="phone-systems.html">Phone Systems</a></li>
+            <li><a href="server-maintenance.html">Server Installation &amp; Maintenance</a></li>
+            <li><a href="network-management.html">Network Management</a></li>
+            <li><a href="website-building.html">Website Building</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- ===== END HEADER ===== -->
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <span class="tag">Contact</span>
+    <h1>Contact Computified</h1>
+    <p>Tell us about your project or the problem you&rsquo;re having. We&rsquo;ll get back to you to talk through options and put together a quote.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap two-col">
+    <div>
+      <h2>Send us a message</h2>
+      <!-- This form has no server backend. It opens the visitor's email program
+           with the message filled in (mailto). To change the address, edit computifiedllc@gmail.com below. -->
+      <form class="contact" action="mailto:computifiedllc@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Name</label>
+        <input id="name" name="Name" type="text" required>
+        <label for="email">Email</label>
+        <input id="email" name="Email" type="email" required>
+        <label for="phone">Phone (optional)</label>
+        <input id="phone" name="Phone" type="tel">
+        <label for="service">Service</label>
+        <select id="service" name="Service">
+          <option>Computer Repair &amp; IT</option>
+          <option>Security Cameras</option>
+          <option>Remote Access</option>
+          <option>Access Control</option>
+          <option>Phone Systems</option>
+          <option>Server Installation &amp; Maintenance</option>
+          <option>Network Management</option>
+          <option>Website Building</option>
+          <option>Other / Not sure</option>
+        </select>
+        <label for="message">How can we help?</label>
+        <textarea id="message" name="Message" required></textarea>
+        <button class="btn" type="submit">Send message</button>
+        <p class="note">Submitting opens your email program with your message ready to send. If that doesn&rsquo;t work, email us directly at <a href="mailto:computifiedllc@gmail.com">computifiedllc@gmail.com</a>.</p>
+      </form>
+    </div>
+    <aside>
+      <div class="contact-box">
+        <h3>Get in touch</h3>
+        <dl>
+          <dt>Phone</dt>
+          <dd><a href="tel:+18022770613">(802) 277-0613</a></dd>
+          <dt>Email</dt>
+          <dd><a href="mailto:computifiedllc@gmail.com">computifiedllc@gmail.com</a></dd>
+          <dt>Location</dt>
+          <dd>Brooklyn, NY</dd>
+        </dl>
+      </div>
+      <div class="plan" style="margin-top:20px">
+        <h3>Ask about annual plans</h3>
+        <p class="note" style="font-size:16px">Cloud video storage and remote access management are available as ongoing annual plans.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER (same on every page) ===== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="logo" href="index.html"><img src="images/comp.png" alt="Computified" width="700" height="215"></a>
+        <p>Computified LLC &middot; Brooklyn, NY<br>IT, servers, security, phone systems and websites.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="computer-repair.html">Computer Repair &amp; IT</a></li>
+          <li><a href="security-cameras.html">Security Cameras</a></li>
+          <li><a href="remote-access.html">Remote Access</a></li>
+          <li><a href="access-control.html">Access Control</a></li>
+          <li><a href="phone-systems.html">Phone Systems</a></li>
+          <li><a href="server-maintenance.html">Server Installation &amp; Maintenance</a></li>
+          <li><a href="network-management.html">Network Management</a></li>
+          <li><a href="website-building.html">Website Building</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Phone: (802) 277-0613</li>
+          <li>Email: <a href="mailto:computifiedllc@gmail.com">computifiedllc@gmail.com</a></li>
+          <li><a href="contact.html">Request a quote &rarr;</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">&copy; <span>2026</span> Computified LLC. All rights reserved.</div>
+  </div>
+</footer>
+<!-- ===== END FOOTER ===== -->
+
+</body>
+</html>
